@@ -1,0 +1,61 @@
+---
+export interface Props {
+	banner: string;
+	title: string;
+}
+
+const { banner, title } = Astro.props;
+---
+
+<article class="project">
+	<img class="project__img" src={banner} alt={title}>
+	<div class="project__title-container">
+		<span class="project__title-wrapper">&lt;</span>
+		<span class="project__title">{title}</span>
+		<span class="project__title-wrapper">/&gt;</span>
+	</div>
+</article>
+
+<style>
+	.project {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--main-gray);
+	}
+
+	.project__img {
+		width: 100%;
+		height: 28vh;
+	}
+
+	.project__title-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.project__title {
+		padding: 1.75rem 0.5rem;
+		font-size: var(--medium-font-size);
+		font-weight: bold;
+		text-align: center;
+		color: var(--just-white);
+	}
+
+	.project__title-wrapper {
+		font-size: var(--medium-font-size);
+		font-weight: bold;
+		color: var(--code-wrapper);
+		transition: color 0.3s ease-out;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.project {
+			cursor: pointer;
+		}
+
+		.project:hover {
+			--code-wrapper: tomato;
+		}
+	}
+</style>

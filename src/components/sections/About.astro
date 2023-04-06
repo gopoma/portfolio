@@ -1,9 +1,9 @@
 ---
-import CVLink from "./CVLink.astro";
-import SocialMediaLinks from "./SocialMediaLinks.astro";
+import CVLink from "../CVLink.astro";
+import SocialMediaLinks from "../SocialMediaLinks.astro";
 ---
 
-<header class="about">
+<section id="about" class="about">
 	<h1 class="about__developer-name">Gustavo</h1>
 	<p class="about__developer-career">Software Engineer</p>
 
@@ -20,12 +20,12 @@ import SocialMediaLinks from "./SocialMediaLinks.astro";
 
 		<SocialMediaLinks />
 	</section>
-</header>
+</section>
 
 <style>
 	.about {
-		margin-top: 7.5rem;
 		padding: 2rem 0;
+		padding-top: 7.5rem;
 		display: flex;
 		gap: 1.45rem;
 		flex-direction: column;
@@ -74,8 +74,15 @@ import SocialMediaLinks from "./SocialMediaLinks.astro";
 	}
 
 	.about__description {
-		font-size: var(--regular-font-size-font-size);
+		padding: 0rem 1.45rem;
+		font-size: var(--regular-font-size);
 		text-align: justify;
 		color: var(--just-white);
+	}
+
+	@media screen and (min-width: 1024px) {
+		.about__description {
+			padding: 0rem 7.5rem;
+		}
 	}
 </style>

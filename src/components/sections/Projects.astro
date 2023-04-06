@@ -1,0 +1,49 @@
+---
+import projects from "../../projects/personal_proyects.json";
+import ProjectCard from "../ProjectCard.astro";
+---
+
+<section id="projects" class="projects">
+	<h3 class="projects__title">These are some of my projects</h3>
+	<section class="projects__grid">
+		{
+			projects.map((project) => <ProjectCard banner={project.banner} title={project.title}/>)
+		}
+	</section>
+</section>
+
+<style>
+	.projects {
+		padding: 2rem 0;
+	}
+
+	.projects__title {
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1.45rem;
+		padding: 1.45rem;
+		border-bottom: 1px solid var(--just-white);
+		font-size: var(--large-font-size);
+		text-align: center;
+		color: var(--just-white);
+	}
+
+	.projects__grid {
+		display: grid;
+		gap: 1.45rem;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	@media screen and (min-width: 680px) {
+		.projects__grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.projects__grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>

@@ -81,6 +81,7 @@ export interface Props {
 		width: 3.5em;
 		height: 3.5em;
 	}
+
 	.img-icon {
 		-webkit-filter: grayscale(1); /* Webkit */
 		filter: gray; /* IE6-9 */
@@ -88,9 +89,6 @@ export interface Props {
 	}
 
 	@media screen and (min-width: 680px) {
-		.projects-section__grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
 		.navbar__link {
 			padding-top: 0.6rem;
 			padding-bottom: 0.6rem;
@@ -100,22 +98,15 @@ export interface Props {
 	@media screen and (min-width: 1024px) {
 		.wrapper {
 			width: 100%;
-			max-width: 800px;
+			max-width: 1000px;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		.projects-section__grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-		.project {
-			cursor: pointer;
-		}
-		.project:hover {
-			--code-wrapper: tomato;
-		}
+
 		.modal__content {
 			width: 50vw;
 		}
+
 		.modal__close:hover {
 			background-color: rgba(255, 0, 0, 0.45);
 		}
