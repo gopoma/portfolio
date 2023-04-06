@@ -1,0 +1,29 @@
+---
+import SocialMediaLink from "./SocialMediaLink.astro";
+---
+
+<section class="social-media__links">
+	<SocialMediaLink
+		link="https://www.linkedin.com/in/gopoma"
+		type="linkedin"
+	/>
+	<SocialMediaLink
+		link="https://github.com/gopoma"
+		type="github"
+	/>
+	<SocialMediaLink
+		link="https://twitter.com/gopoma79"
+		type="twitter"
+	/>
+	<SocialMediaLink
+		link="https://www.youtube.com/channel/UCshv5DWeZCErH8kOlJ36uYQ"
+		type="youtube"
+	/>
+</section>
+
+<style>
+	.social-media__links {
+		display: flex;
+		gap: 0.85rem;
+	}
+</style>

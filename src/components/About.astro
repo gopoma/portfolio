@@ -1,0 +1,81 @@
+---
+import CVLink from "./CVLink.astro";
+import SocialMediaLinks from "./SocialMediaLinks.astro";
+---
+
+<header class="about">
+	<h1 class="about__developer-name">Gustavo</h1>
+	<p class="about__developer-career">Software Engineer</p>
+
+	<section class="about__container">
+		<p class="about__description">
+			Full Stack developer (Back End strong) and Systems Engineering
+			student with a passion for developing the complete flow of web
+			applications. Strong React and Node.js skills, in addition to an
+			affinity with Model View Controller (MVC) and Service Oriented
+			Architecture (SOA) architectures in Back End.
+		</p>
+
+		<CVLink />
+
+		<SocialMediaLinks />
+	</section>
+</header>
+
+<style>
+	.about {
+		margin-top: 7.5rem;
+		padding: 2rem 0;
+		display: flex;
+		gap: 1.45rem;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about__developer-name {
+		font-size: 2.85em;
+		text-align: center;
+		color: var(--just-white);
+	}
+
+	.about__developer-career {
+		font-size: 1.75rem;
+		text-align: center;
+		color: var(--just-white);
+
+		display: block;
+		font-family: monospace;
+		white-space: nowrap;
+		border-right: 4px solid;
+		width: 17ch;
+
+		animation: typing 4s steps(17), blink 0.5s infinite step-end alternate;
+		overflow: hidden;
+	}
+
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+	}
+
+	@keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+	}
+
+	.about__container {
+		display: flex;
+		gap: 1.45rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.about__description {
+		font-size: var(--regular-font-size-font-size);
+		text-align: justify;
+		color: var(--just-white);
+	}
+</style>
