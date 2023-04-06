@@ -1,5 +1,6 @@
 ---
 import MainHead from "../components/MainHead.astro";
+import Navbar from "../components/Navbar.astro";
 
 export interface Props {
 	title: string;
@@ -13,17 +14,27 @@ export interface Props {
 		description="Gustavo Ordoño Poma [gopoma] | Software Engineer | Back End Developer"
 	/>
 	<body>
-		<slot />
+		<Navbar />
+
+		<main class="wrapper">
+			<slot />
+		</main>
 	</body>
 </html>
 
 <style is:global>
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
 	:root {
 		--just-black: #000;
-		--just-white: #FFF;
+		--just-white: #fff;
 		--dark-gray: #757575;
-		--medium-gray: #A1A1AA;
-		--soft-gray: #F1F1F1;
+		--medium-gray: #a1a1aa;
+		--soft-gray: #f1f1f1;
 		--main-gray: #212121;
 		--code-wrapper: var(--main-gray);
 		--small-font-size: 0.75em;
@@ -34,6 +45,17 @@ export interface Props {
 
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		background-color: #f6f6f6;
+	}
+
+	body {
+		min-height: 100vh;
+		background-color: var(--just-black);
+	}
+
+	.wrapper {
+		width: calc(100% - 2rem);
+		margin-left: 1rem;
+		margin-right: 1rem;
 	}
 </style>

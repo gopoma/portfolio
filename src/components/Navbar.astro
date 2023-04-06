@@ -1,0 +1,43 @@
+<nav class="navbar">
+	<ul class="navbar__links">
+		<li><a class="navbar__link" href="#about">About</a></li>
+		<li><a class="navbar__link" href="#projects">Projects</a></li>
+		<li><a class="navbar__link" href="#skills">Skills</a></li>
+		<li><a class="navbar__link" href="#contact">Contact</a></li>
+	</ul>
+</nav>
+
+<style>
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.navbar__links {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		list-style: none;
+	}
+
+	.navbar__link {
+		width: 100%;
+		background-color: var(--main-gray);
+		text-align: center;
+		font-size: var(--small-font-size);
+		font-weight: bold;
+		display: inline-block;
+		padding-top: 0.45rem;
+		padding-bottom: 0.45rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: var(--just-white);
+		transition: background 0.3s ease-out;
+	}
+
+	.navbar__link:hover {
+		background-color: var(--soft-gray);
+		color: var(--just-black);
+	}
+</style>

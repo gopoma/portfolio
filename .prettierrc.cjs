@@ -1,7 +1,7 @@
 module.exports = {
-    semi: false,
-    singleQuote: true,
-    tabWidth: 2,
+    semi: true,
+    singleQuote: false,
+    tabWidth: 4,
     useTabs: true,
     plugins: [require('prettier-plugin-astro')],
     overrides: [
