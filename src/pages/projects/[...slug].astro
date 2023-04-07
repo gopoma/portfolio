@@ -47,7 +47,7 @@ const project = Astro.props;
 				<span class="project__caption">Skills:</span>
 				<ul class="project__skills">
 					{
-						project.data.skills.map((skill) => <li class="project__skill">{skill}</li>)
+						project.data.skills.map((skill) => <span class="project__skill">{skill}</span>)
 					}
 				</ul>
 			</section>
@@ -86,8 +86,9 @@ const project = Astro.props;
 	}
 
 	.project__img {
-		width: 20vw;
-		min-width: 450px;
+		width: 25vw;
+		min-width: 360px;
+		aspect-ratio: 25 / 16;
 	}
 
 	.project__content-container {
@@ -123,11 +124,20 @@ const project = Astro.props;
 	}
 
 	.project__skills {
-		margin-left: 16px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.project__skill {
-		font-size: var(--regular-font-size);
+		margin: 0.25rem;
+		outline: none;
+		border-radius: 1rem;
+		border: none;
+		padding: 0.5rem 1rem;
+		font-size: var(--small-font-size);
+		font-weight: bold;
+		background-color: #DDD;
+		color: var(--just-black);
 	}
 
 	@media screen and (min-width: 680px) {
@@ -137,6 +147,10 @@ const project = Astro.props;
 
 		.project__container {
 			grid-template-columns: 3fr 4fr;
+		}
+
+		.project__skill:hover {
+			background-color: #CCC;
 		}
 	}
 </style>
