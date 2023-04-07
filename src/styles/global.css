@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--just-black: #000;
+	--just-white: #fff;
+	--dark-gray: #757575;
+	--medium-gray: #a1a1aa;
+	--soft-gray: #f1f1f1;
+	--main-gray: #212121;
+	--code-wrapper: var(--main-gray);
+	--small-font-size: 0.75em;
+	--regular-font-size: 1.08em;
+	--medium-font-size: 1.16em;
+	--large-font-size: 2em;
+}
+
+html {
+	font-family: system-ui, sans-serif;
+	background-color: var(--just-black);
+}
+
+.icon--sm {
+	font-size: 1.08em;
+}
+
+.icon--md {
+	font-size: 1.5em;
+}
+
+.icon--lg {
+	font-size: 2em;
+}
+
+.icon--xl {
+	font-size: 3.5em;
+}
+
+.icon--white {
+	color: var(--just-white);
+}
+
+.icon--black {
+	color: var(--just-black);
+}
+
+.skill-img {
+	width: 3.5em;
+	height: 3.5em;
+}
+
+.img-icon {
+	-webkit-filter: grayscale(1); /* Webkit */
+	filter: gray; /* IE6-9 */
+	filter: grayscale(1); /* W3C */
+}

@@ -1,6 +1,9 @@
 ---
 import MainHead from "../components/MainHead.astro";
 import Navbar from "../components/Navbar.astro";
+import Wrapper from "../components/Wrapper.astro";
+
+import "../styles/global.css";
 
 export interface Props {
 	title: string;
@@ -16,99 +19,8 @@ export interface Props {
 	<body>
 		<Navbar />
 
-		<main class="wrapper">
+		<Wrapper>
 			<slot />
-		</main>
+		</Wrapper>
 	</body>
 </html>
-<style is:global>
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
-
-	:root {
-		--just-black: #000;
-		--just-white: #fff;
-		--dark-gray: #757575;
-		--medium-gray: #a1a1aa;
-		--soft-gray: #f1f1f1;
-		--main-gray: #212121;
-		--code-wrapper: var(--main-gray);
-		--small-font-size: 0.75em;
-		--regular-font-size: 1.08em;
-		--medium-font-size: 1.16em;
-		--large-font-size: 2em;
-	}
-
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: var(--just-black);
-	}
-
-	.wrapper {
-		width: calc(100% - 2rem);
-		margin-left: 1rem;
-		margin-right: 1rem;
-	}
-
-	.icon--sm {
-		font-size: 1.08em;
-	}
-
-	.icon--md {
-		font-size: 1.5em;
-	}
-
-	.icon--lg {
-		font-size: 2em;
-	}
-
-	.icon--xl {
-		font-size: 3.5em;
-	}
-
-	.icon--white {
-		color: var(--just-white);
-	}
-
-	.icon--black {
-		color: var(--just-black);
-	}
-
-	.skill-img {
-		width: 3.5em;
-		height: 3.5em;
-	}
-
-	.img-icon {
-		-webkit-filter: grayscale(1); /* Webkit */
-		filter: gray; /* IE6-9 */
-		filter: grayscale(1); /* W3C */
-	}
-
-	@media screen and (min-width: 680px) {
-		.navbar__link {
-			padding-top: 0.6rem;
-			padding-bottom: 0.6rem;
-			font-size: var(--regular-font-size);
-		}
-	}
-	@media screen and (min-width: 1024px) {
-		.wrapper {
-			width: 100%;
-			max-width: 1000px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.modal__content {
-			width: 50vw;
-		}
-
-		.modal__close:hover {
-			background-color: rgba(255, 0, 0, 0.45);
-		}
-	}
-</style>
