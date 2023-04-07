@@ -1,5 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
 	const projects = await getCollection("projects");
@@ -10,15 +11,21 @@ export async function getStaticPaths() {
 	}));
 }
 
+// eslint-disable-next-line
 type Props = CollectionEntry<"projects">;
 
 const project = Astro.props;
 ---
 
-<main>
-	<a href="/">Go back</a>
-	<section>
-		<h1>{project.data.title}</h1>
-		<pre>{JSON.stringify(project.data, null, 2)}</pre>
-	</section>
-</main>
+<Layout
+	title={project.data.title}
+	description={project.data.description}
+>
+	<main>
+		<a href="/">Go back</a>
+		<section>
+			<h1>{project.data.title}</h1>
+			<pre>{JSON.stringify(project.data, null, 2)}</pre>
+		</section>
+	</main>
+</Layout>

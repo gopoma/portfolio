@@ -7,18 +7,20 @@ import "../styles/global.css";
 
 export interface Props {
 	title: string;
+	description: string;
 }
+
+const { title, description } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<MainHead
-		title="Gustavo"
-		description="Gustavo Ordoño Poma [gopoma] | Software Engineer | Back End Developer"
+		title={title}
+		description={description}
 	/>
 	<body>
-		<Navbar />
-
 		<Wrapper>
 			<slot />
 		</Wrapper>
