@@ -1,13 +1,16 @@
 ---
-import projects from "../../projects/personal_proyects.json";
+import { getCollection } from "astro:content";
+
 import ProjectCard from "../ProjectCard.astro";
+
+const projects = await getCollection("projects");
 ---
 
 <section id="projects" class="projects">
 	<h3 class="projects__title">These are some of my projects</h3>
 	<section class="projects__grid">
 		{
-			projects.map((project) => <ProjectCard banner={project.banner} title={project.title}/>)
+			projects.map((project) => <ProjectCard banner={project.data.banner} title={project.data.title}/>)
 		}
 	</section>
 </section>

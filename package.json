@@ -12,6 +12,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.18.2",
     "astro": "^2.2.0"
   },
   "devDependencies": {
