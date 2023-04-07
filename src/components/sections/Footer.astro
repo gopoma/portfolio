@@ -1,9 +1,4 @@
----
-import SocialMediaLinks from "../SocialMediaLinks.astro";
----
-
 <footer class="footer">
-	<SocialMediaLinks size="md" />
 	<div class="footer__license-container">
 		<p class="footer__license">This page is licensed under the Apache License, Version 2.0</p>
 	</div>
@@ -11,7 +6,7 @@ import SocialMediaLinks from "../SocialMediaLinks.astro";
 
 <style>
 	.footer {
-		padding: var(--large-spacing) var(--regular-spacing);
+		padding: var(--large-spacing) 0;
 		display: flex;
 		gap: var(--regular-spacing);
 		flex-direction: column;

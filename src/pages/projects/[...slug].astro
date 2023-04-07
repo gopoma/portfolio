@@ -53,6 +53,26 @@ const project = Astro.props;
 						}
 					</ul>
 				</section>
+				<section class="project__content-section">
+					<span class="project__caption">Links:</span>
+					<section class="project__links">
+						{
+							project.data.link &&
+							<a class="project__link" href={project.data.link} target="_blank">
+								<i class="icon icon--md icon--white fa-solid fa-link"></i>
+							</a>
+						}
+						{
+							project.data.video &&
+							<a class="project__link" href={project.data.video} target="_blank">
+								<i class="icon icon--md icon--white fa-solid fa-video"></i>
+							</a>
+						}
+						<a class="project__link" href={project.data.repository} target="_blank">
+							<i class="icon icon--md icon--white fa-solid fa-code"></i>
+						</a>
+					</section>
+				</section>
 			</section>
 		</section>
 	</main>
@@ -60,7 +80,7 @@ const project = Astro.props;
 
 <style>
 	.project {
-		padding-top: 4.5rem;
+		padding-top: var(--large-spacing);
 		color: var(--just-white);
 		display: flex;
 		flex-direction: column;
@@ -132,6 +152,15 @@ const project = Astro.props;
 	.project__skills {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	.project__links {
+		display: flex;
+		gap: var(--regular-spacing);
+	}
+
+	.project__link {
+		font-size: var(--regular-font-size);
 	}
 
 	@media screen and (min-width: 680px) {
