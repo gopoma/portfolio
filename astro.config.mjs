@@ -2,5 +2,5 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://gopoma.cf"
+	site: "https://www.gopomaagosto2022.cf"
 });
