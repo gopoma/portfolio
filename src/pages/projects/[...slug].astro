@@ -21,11 +21,122 @@ const project = Astro.props;
 	title={project.data.title}
 	description={project.data.description}
 >
-	<main>
-		<a href="/">Go back</a>
-		<section>
-			<h1>{project.data.title}</h1>
-			<pre>{JSON.stringify(project.data, null, 2)}</pre>
+	<main class="project project__container">
+		<section class="project__img-container">
+			<img
+				src={project.data.banner}
+				alt={project.data.title}
+				class="project__img"
+			/>
+		</section>
+		<section class="project__content-container">
+			<h2 class="project__title-container">
+				<span class="project__title">{project.data.title}</span>
+				<a
+					href="/"
+					class="go-back"
+				>
+					Go back
+				</a>
+			</h2>
+			<section class="project__content-section">
+				<span class="project__caption">Description:</span>
+				<p class="project__content">{project.data.description}</p>
+			</section>
+			<section class="project__content-section">
+				<span class="project__caption">Skills:</span>
+				<ul class="project__skills">
+					{
+						project.data.skills.map((skill) => <li class="project__skill">{skill}</li>)
+					}
+				</ul>
+			</section>
 		</section>
 	</main>
 </Layout>
+
+<style>
+	.project {
+		padding-top: 4.5rem;
+		color: var(--just-white);
+	}
+
+	.project__container {
+		display: grid;
+		gap: 1.45rem;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.go-back {
+		width: max-content;
+		border-radius: 4px;
+		padding: 0.45rem;
+		background-color: #0d6efd;
+		text-decoration: none;
+		color: var(--just-white);
+		font-size: var(--small-font-size);
+		font-weight: bold;
+		transition: background 0.3s ease-out;
+	}
+
+	.project__img-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.project__img {
+		width: 20vw;
+		min-width: 450px;
+	}
+
+	.project__content-container {
+		display: flex;
+		flex-direction: column;
+		gap: 1.45rem;
+	}
+
+	.project__title-container {
+		font-size: var(--regular-font-size);
+		display: flex;
+		gap: 1.45rem;
+		align-items: center;
+	}
+
+	.project__title {
+		font-size: var(--large-font-size);
+	}
+
+	.project__content-section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.project__caption {
+		font-size: var(--regular-font-size);
+		font-weight: bold;
+	}
+
+	.project__content {
+		font-size: var(--regular-font-size);
+	}
+
+	.project__skills {
+		margin-left: 16px;
+	}
+
+	.project__skill {
+		font-size: var(--regular-font-size);
+	}
+
+	@media screen and (min-width: 680px) {
+		.go-back:hover {
+			background-color: #0b5ed7;
+		}
+
+		.project__container {
+			grid-template-columns: 3fr 4fr;
+		}
+	}
+</style>
