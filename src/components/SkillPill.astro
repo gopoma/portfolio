@@ -1,0 +1,29 @@
+---
+export interface Props {
+	skill: string;
+}
+
+const { skill } = Astro.props;
+---
+
+<span class="skill-pill">{skill}</span>
+
+<style>
+	.skill-pill {
+		margin: 0.25rem;
+		outline: none;
+		border-radius: 1rem;
+		border: none;
+		padding: 0.5rem 1rem;
+		font-size: var(--small-font-size);
+		font-weight: bold;
+		background-color: #DDD;
+		color: var(--just-black);
+	}
+
+	@media screen and (min-width: 680px) {
+		.skill-pill:hover {
+			background-color: #CCC;
+		}
+	}
+</style>

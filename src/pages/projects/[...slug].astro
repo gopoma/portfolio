@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import SkillPill from "../../components/SkillPill.astro";
 
 export async function getStaticPaths() {
 	const projects = await getCollection("projects");
@@ -47,7 +48,7 @@ const project = Astro.props;
 				<span class="project__caption">Skills:</span>
 				<ul class="project__skills">
 					{
-						project.data.skills.map((skill) => <span class="project__skill">{skill}</span>)
+						project.data.skills.map((skill) => <SkillPill skill={skill} />)
 					}
 				</ul>
 			</section>
@@ -128,18 +129,6 @@ const project = Astro.props;
 		flex-wrap: wrap;
 	}
 
-	.project__skill {
-		margin: 0.25rem;
-		outline: none;
-		border-radius: 1rem;
-		border: none;
-		padding: 0.5rem 1rem;
-		font-size: var(--small-font-size);
-		font-weight: bold;
-		background-color: #DDD;
-		color: var(--just-black);
-	}
-
 	@media screen and (min-width: 680px) {
 		.go-back:hover {
 			background-color: #0b5ed7;
@@ -147,10 +136,6 @@ const project = Astro.props;
 
 		.project__container {
 			grid-template-columns: 3fr 4fr;
-		}
-
-		.project__skill:hover {
-			background-color: #CCC;
 		}
 	}
 </style>
