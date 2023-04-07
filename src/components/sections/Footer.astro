@@ -1,0 +1,30 @@
+---
+import SocialMediaLinks from "../SocialMediaLinks.astro";
+---
+
+<footer class="footer">
+	<SocialMediaLinks size="md" />
+	<div class="footer__license-container">
+		<p class="footer__license">This page is licensed under the Apache License, Version 2.0</p>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		padding: 2rem 1.45rem;
+		display: flex;
+		gap: 1.45rem;
+		flex-direction: column;
+	}
+
+	.footer__social-media-container {
+		margin-bottom: 1.2rem;
+		display: flex;
+		gap: 0.45rem;
+	}
+
+	.footer__license {
+		font-size: var(--regular-font-size);
+		color: var(--dark-gray);
+	}
+</style>

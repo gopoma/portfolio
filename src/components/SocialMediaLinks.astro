@@ -1,29 +1,39 @@
 ---
 import SocialMediaLink from "./SocialMediaLink.astro";
+
+export interface Props {
+	size: "lg" | "md"
+}
+
+const { size } = Astro.props;
 ---
 
 <section class="social-media__links">
 	<SocialMediaLink
 		link="https://www.linkedin.com/in/gopoma"
 		type="linkedin"
+		size={size}
 	/>
 	<SocialMediaLink
 		link="https://github.com/gopoma"
 		type="github"
+		size={size}
 	/>
 	<SocialMediaLink
 		link="https://twitter.com/gopoma79"
 		type="twitter"
+		size={size}
 	/>
 	<SocialMediaLink
 		link="https://www.youtube.com/channel/UCshv5DWeZCErH8kOlJ36uYQ"
 		type="youtube"
+		size={size}
 	/>
 </section>
 
 <style>
 	.social-media__links {
 		display: flex;
-		gap: 0.85rem;
+		gap: 1.45rem;
 	}
 </style>

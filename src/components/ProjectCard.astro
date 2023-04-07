@@ -28,6 +28,7 @@ const { banner, link, title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		background-color: var(--main-gray);
+		transition: all .2s ease-in-out;
 	}
 
 	.project__img {
@@ -59,6 +60,7 @@ const { banner, link, title } = Astro.props;
 	@media screen and (min-width: 1024px) {
 		.project:hover {
 			--code-wrapper: tomato;
+			transform: scale(1.08);
 		}
 	}
 </style>

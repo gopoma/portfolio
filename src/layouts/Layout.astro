@@ -1,7 +1,7 @@
 ---
 import MainHead from "../components/MainHead.astro";
-import Navbar from "../components/Navbar.astro";
 import Wrapper from "../components/Wrapper.astro";
+import Footer from "../components/sections/Footer.astro";
 
 import "../styles/global.css";
 
@@ -22,7 +22,19 @@ const { title, description } = Astro.props;
 	/>
 	<body>
 		<Wrapper>
-			<slot />
+			<section class="divider">
+				<slot />
+				<Footer />
+			</section>
 		</Wrapper>
 	</body>
 </html>
+
+<style>
+	.divider {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+</style>
