@@ -17,15 +17,15 @@ const projects = await getCollection("projects");
 
 <style>
 	.projects {
-		padding: 2rem 0;
+		padding-bottom: var(--large-spacing);
 	}
 
 	.projects__title {
 		max-width: 640px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 1.45rem;
-		padding: 1.45rem;
+		margin-bottom: var(--regular-spacing);
+		padding: var(--regular-spacing);
 		border-bottom: 1px solid var(--just-white);
 		font-size: var(--large-font-size);
 		text-align: center;
@@ -34,7 +34,7 @@ const projects = await getCollection("projects");
 
 	.projects__grid {
 		display: grid;
-		gap: 1.45rem;
+		gap: var(--regular-spacing);
 		grid-template-columns: repeat(1, 1fr);
 	}
 

@@ -16,6 +16,8 @@
 	--regular-font-size: 1.12em;
 	--medium-font-size: 1.16em;
 	--large-font-size: 2em;
+	--regular-spacing: 2.25rem;
+	--large-spacing: 4rem;
 }
 
 html {
