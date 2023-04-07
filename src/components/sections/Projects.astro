@@ -10,7 +10,7 @@ const projects = await getCollection("projects");
 	<h3 class="projects__title">These are some of my projects</h3>
 	<section class="projects__grid">
 		{
-			projects.map((project) => <ProjectCard banner={project.data.banner} title={project.data.title}/>)
+			projects.map((project) => <ProjectCard banner={project.data.banner} title={project.data.title} link={`/projects/${project.slug}`}/>)
 		}
 	</section>
 </section>

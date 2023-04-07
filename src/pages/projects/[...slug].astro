@@ -1,0 +1,24 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+	const projects = await getCollection("projects");
+
+	return projects.map((project) => ({
+		params: { slug: project.slug },
+		props: project
+	}));
+}
+
+type Props = CollectionEntry<"projects">;
+
+const project = Astro.props;
+---
+
+<main>
+	<a href="/">Go back</a>
+	<section>
+		<h1>{project.data.title}</h1>
+		<pre>{JSON.stringify(project.data, null, 2)}</pre>
+	</section>
+</main>

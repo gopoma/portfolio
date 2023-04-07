@@ -1,22 +1,29 @@
 ---
 export interface Props {
 	banner: string;
+	link: string;
 	title: string;
 }
 
-const { banner, title } = Astro.props;
+const { banner, link, title } = Astro.props;
 ---
 
-<article class="project">
-	<img class="project__img" src={banner} alt={title}>
-	<div class="project__title-container">
-		<span class="project__title-wrapper">&lt;</span>
-		<span class="project__title">{title}</span>
-		<span class="project__title-wrapper">/&gt;</span>
-	</div>
-</article>
+<a href={link} class="link">
+	<article class="project">
+		<img class="project__img" src={banner} alt={title}>
+		<div class="project__title-container">
+			<span class="project__title-wrapper">&lt;</span>
+			<span class="project__title">{title}</span>
+			<span class="project__title-wrapper">/&gt;</span>
+		</div>
+	</article>
+</a>
 
 <style>
+	.link {
+		text-decoration: none;
+	}
+
 	.project {
 		display: flex;
 		flex-direction: column;
@@ -50,10 +57,6 @@ const { banner, title } = Astro.props;
 	}
 
 	@media screen and (min-width: 1024px) {
-		.project {
-			cursor: pointer;
-		}
-
 		.project:hover {
 			--code-wrapper: tomato;
 		}
