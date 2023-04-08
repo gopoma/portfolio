@@ -1,0 +1,34 @@
+---
+import SkillCard from "./SkillCard.astro";
+import SkillIcon from "./SkillIcon.astro";
+import SkillImage from "./SkillImage.astro";
+
+import { Skill, skills } from "../data";
+---
+
+<section class="skills__grid">
+	{
+		skills.map((skill: Skill) =>
+			<SkillCard title={skill.name}>
+				{
+					skill.type === "icon" ?
+						<SkillIcon slot="banner" icon={skill.src} /> :
+						<SkillImage
+							slot="banner"
+							title={skill.name}
+							src={skill.src}
+							preserve={Boolean(skill.preserve)}
+						/>
+				}
+			</SkillCard>
+		)
+	}
+</section>
+
+<style>
+	.skills__grid {
+		display: grid;
+		gap: var(--small-spacing);
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	}
+</style>

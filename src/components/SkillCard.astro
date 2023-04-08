@@ -1,0 +1,30 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<article class="skill">
+	<slot name="banner" />
+	<h4 class="skill__title">{title}</h4>
+</article>
+
+<style>
+	.skill {
+		padding: 0.8rem;
+		display: flex;
+		gap: 0.45rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--main-gray);
+	}
+
+	.skill__title {
+		font-size: var(--regular-font-size);
+		text-align: center;
+		color: var(--just-white);
+	}
+</style>

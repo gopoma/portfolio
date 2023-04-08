@@ -1,0 +1,26 @@
+---
+import SkillsGrid from "../SkillsGrid.astro";
+---
+
+<section id="skills" class="skills">
+	<h3 class="skills__title">My Skills</h3>
+	<SkillsGrid />
+</section>
+
+<style>
+	.skills {
+		padding-bottom: var(--large-spacing);
+	}
+
+	.skills__title {
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: var(--regular-spacing);
+		padding: var(--regular-spacing);
+		border-bottom: 1px solid var(--just-white);
+		font-size: var(--large-font-size);
+		text-align: center;
+		color: var(--just-white);
+	}
+</style>

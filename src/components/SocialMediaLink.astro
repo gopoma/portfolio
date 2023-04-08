@@ -1,4 +1,6 @@
 ---
+import IconWrapper from "./IconWrapper.astro";
+
 export interface Props {
 	link: string;
 	type: "linkedin" | "github" | "twitter" | "youtube"
@@ -9,5 +11,9 @@ const { link, type, size } = Astro.props;
 ---
 
 <a href={link} target="_blank">
-	<i class={`icon icon--${size} icon--white fa-brands fa-${type}`}></i>
+	<IconWrapper
+		icon={`fa-brands fa-${type}`}
+		color={"white"}
+		size={size}
+	/>
 </a>

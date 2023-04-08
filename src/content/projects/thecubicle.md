@@ -7,8 +7,8 @@ description: |
 repository: "https://github.com/gopoma/Cube-Ecommerce"
 skills:
  - "Service-Oriented Architecture (SOA)"
- - "NodeJS"
- - "Express"
+ - "Node.js"
+ - "Express.js"
  - "MongoDB"
  - "Mongoose"
  - "JSON Web Tokens"

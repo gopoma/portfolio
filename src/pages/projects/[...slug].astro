@@ -2,6 +2,7 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import SkillPill from "../../components/SkillPill.astro";
+import IconWrapper from "../../components/IconWrapper.astro";
 
 export async function getStaticPaths() {
 	const projects = await getCollection("projects");
@@ -59,17 +60,29 @@ const project = Astro.props;
 						{
 							project.data.link &&
 							<a class="project__link" href={project.data.link} target="_blank">
-								<i class="icon icon--md icon--white fa-solid fa-link"></i>
+								<IconWrapper
+									icon="fa-solid fa-link"
+									color="white"
+									size="md"
+								/>
 							</a>
 						}
 						{
 							project.data.video &&
 							<a class="project__link" href={project.data.video} target="_blank">
-								<i class="icon icon--md icon--white fa-solid fa-video"></i>
+								<IconWrapper
+									icon="fa-solid fa-video"
+									color="white"
+									size="md"
+								/>
 							</a>
 						}
 						<a class="project__link" href={project.data.repository} target="_blank">
-							<i class="icon icon--md icon--white fa-solid fa-code"></i>
+							<IconWrapper
+								icon="fa-solid fa-code"
+								color="white"
+								size="md"
+							/>
 						</a>
 					</section>
 				</section>

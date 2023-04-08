@@ -1,0 +1,28 @@
+---
+export interface Props {
+	title: string;
+	src: string;
+	preserve?: boolean;
+}
+
+const { title, src, preserve } = Astro.props;
+---
+
+<img
+	class={`skill-img ${preserve ? "" : "grayscale"}`}
+	src={src}
+	alt={title}
+/>
+
+<style>
+	.skill-img {
+		width: 3.5em;
+		height: 3.5em;
+	}
+
+	.grayscale {
+		-webkit-filter: grayscale(1); /* Webkit */
+		filter: gray; /* IE6-9 */
+		filter: grayscale(1); /* W3C */
+	}
+</style>

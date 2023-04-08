@@ -1,0 +1,15 @@
+---
+import IconWrapper from "./IconWrapper.astro";
+
+export interface Props {
+	icon: string;
+}
+
+const { icon } = Astro.props;
+---
+
+<IconWrapper
+	icon={icon}
+	color={"white"}
+	size={"xl"}
+/>
