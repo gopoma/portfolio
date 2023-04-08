@@ -153,6 +153,11 @@ export const skills: Skill[] = [
 		src: "devicon-webpack-plain"
 	},
 	{
+		name: "Astro",
+		type: "image",
+		src: "/skills/icons/astro.svg"
+	},
+	{
 		name: "Python",
 		type: "icon",
 		src: "devicon-python-plain"
