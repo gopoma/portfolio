@@ -143,7 +143,7 @@ export const skills: Skill[] = [
 		src: "devicon-bootstrap-plain"
 	},
 	{
-		name: "TailwindCSS",
+		name: "Tailwind CSS",
 		type: "icon",
 		src: "devicon-tailwindcss-plain"
 	},
