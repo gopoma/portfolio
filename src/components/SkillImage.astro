@@ -12,6 +12,8 @@ const { title, src, preserve } = Astro.props;
 	class={`skill-img ${preserve ? "" : "grayscale"}`}
 	src={src}
 	alt={title}
+	loading = "lazy"
+	decoding = "async"
 />
 
 <style>

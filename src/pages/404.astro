@@ -2,28 +2,30 @@
 import FullScreenLayout from "../layouts/FullScreenLayout.astro";
 import MainHead from "../components/MainHead.astro";
 import { Picture } from "@astrojs/image/components";
+import NotFoundImage from "../assets/shared/404.jpg";
 import GoBackLink from "../components/GoBackLink.astro";
+
+const title = "Not Found";
+const description = "The resource that you've been looking for is broken or not available at this moment.";
 ---
 
-<FullScreenLayout
-	title="xd"
-	description="xd"
->
+<FullScreenLayout>
 	<MainHead
-		title={"xd"}
-		description={"xd"}
+		title={title}
+		description={description}
 		slot="head"
 	/>
 	<main>
 		<Picture
-			src="/shared/404.webp"
+			src={NotFoundImage}
 			widths={[200, 400, 800]}
 			aspectRatio="4:3"
-			sizes="(max-width: 340px) 80vw, 340px"
+			sizes="(max-width: 400px) 85vw, 400px"
 			alt="Not Found"
+			format="avif"
 		/>
-		<h1>Not Found</h1>
-		<p>The resource that you've been looking for is broken or not available at this moment.</p>
+		<h1>{title}</h1>
+		<p>{description}</p>
 		<GoBackLink size="md" />
 	</main>
 </FullScreenLayout>

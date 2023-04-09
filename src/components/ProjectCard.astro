@@ -10,7 +10,13 @@ const { banner, link, title } = Astro.props;
 
 <a href={link} class="link">
 	<article class="project">
-		<img class="project__img" src={banner} alt={title}>
+		<img
+			class="project__img"
+			src={`/projects/images/${banner}`}
+			alt={title}
+			loading = "lazy"
+			decoding = "async"
+		/>
 		<div class="project__title-container">
 			<span class="project__title-wrapper">&lt;</span>
 			<span class="project__title">{title}</span>

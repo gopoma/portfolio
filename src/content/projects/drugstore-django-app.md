@@ -1,6 +1,6 @@
 ---
 title: "drugstore-django-app"
-banner: "/projects/images/drugstore-django-app.webp"
+banner: "drugstore-django-app.webp"
 description: |
  Consisted of an inventory management application 
  for a local drugstore.

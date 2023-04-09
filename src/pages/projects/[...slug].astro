@@ -35,9 +35,11 @@ const project = Astro.props;
 		<section class="project__container">
 			<section class="project__img-container">
 				<img
-					src={project.data.banner}
+					src={`/projects/images/${project.data.banner}`}
 					alt={project.data.title}
 					class="project__img"
+					loading = "lazy"
+					decoding = "async"
 				/>
 			</section>
 			<section class="project__content-container">

@@ -1,6 +1,6 @@
 ---
 title: "Geometry Dash Browser"
-banner: "/projects/images/geometry-dash-browser.webp"
+banner: "geometry-dash-browser.webp"
 description: |
  Consisted of consuming data from the Geometry Dash API through
  Fetch API and showing the results to user in a friendly
