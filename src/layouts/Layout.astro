@@ -1,25 +1,13 @@
 ---
-import MainHead from "../components/MainHead.astro";
 import Wrapper from "../components/Wrapper.astro";
 import Footer from "../components/sections/Footer.astro";
 
 import "../styles/global.css";
-
-export interface Props {
-	title: string;
-	description: string;
-}
-
-const { title, description } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<MainHead
-		title={title}
-		description={description}
-	/>
+	<slot name="head" />
 	<body>
 		<Wrapper>
 			<section class="divider">

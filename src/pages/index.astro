@@ -1,15 +1,18 @@
 ---
 import About from "../components/sections/About.astro";
 import Layout from "../layouts/Layout.astro";
+import MainHead from "../components/MainHead.astro";
 import Navbar from "../components/Navbar.astro";
 import Projects from "../components/sections/Projects.astro";
 import Skills from "../components/sections/Skills.astro";
 ---
 
-<Layout
-	title="gopoma"
-	description="Gustavo Ordoño Poma [gopoma] | Software Engineer | Back End Developer"
->
+<Layout>
+	<MainHead
+		title="gopoma"
+		description={"Gustavo Ordoño Poma [gopoma] | Software Engineer | Back End Developer"}
+		slot="head"
+	/>
 	<Navbar />
 	<About />
 	<Projects />

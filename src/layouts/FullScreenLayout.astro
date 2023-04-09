@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<slot name="head" />
+	<body>
+		<section class="background">
+			<slot />
+		</section>
+	</body>
+</html>
+
+<style>
+	.background {
+		min-width: 100vh;
+	}
+</style>
