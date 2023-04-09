@@ -1,6 +1,6 @@
 ---
 title: "drugstore-nodejs-app"
-banner: "/projects/images/drugstore_app.jpg"
+banner: "/projects/images/drugstore-nodejs-app.webp"
 description: |
  Developed an E-commerce with solid user authentication through
  email validation that implements Stripe's payment gateway, this

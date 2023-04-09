@@ -103,13 +103,14 @@ const project = Astro.props;
 	.project__title-container {
 		font-size: var(--regular-font-size);
 		display: flex;
+		flex-direction: column-reverse;
 		gap: var(--regular-spacing);
-		align-items: center;
+		align-items: flex-start;
 	}
 
 	.project__title {
 		font-size: var(--large-font-size);
-		word-break: break-all;
+		word-break: keep-all;
 	}
 
 	.go-back {
@@ -177,6 +178,11 @@ const project = Astro.props;
 	}
 
 	@media screen and (min-width: 680px) {
+		.project__title-container {
+			flex-direction: row;
+			align-items: center;
+		}
+
 		.go-back:hover {
 			background-color: #0b5ed7;
 		}

@@ -1,6 +1,6 @@
 ---
 title: "TheCubicle"
-banner: "/projects/images/thecubicle.jpg"
+banner: "/projects/images/thecubicle.webp"
 description: |
  Consisted of an Cube Ecommerce application inspired by
  TheCubicle.

@@ -1,6 +1,6 @@
 ---
 title: "Exercise Tracker"
-banner: "/projects/images/exercise_tracker.jpg"
+banner: "/projects/images/exercise-tracker.webp"
 description: |
  Consisted of a tracker registry application.
 link: "https://exercise-tracker-2fak.onrender.com"

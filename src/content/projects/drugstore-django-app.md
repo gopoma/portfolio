@@ -1,6 +1,6 @@
 ---
 title: "drugstore-django-app"
-banner: "/projects/images/drugstore_pweb2_app.jpg"
+banner: "/projects/images/drugstore-django-app.webp"
 description: |
  Consisted of an inventory management application 
  for a local drugstore.
