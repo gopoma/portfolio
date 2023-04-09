@@ -1,0 +1,42 @@
+---
+export interface Props {
+	size: "sm" | "md"
+}
+
+const { size } = Astro.props;
+---
+
+<a
+	href="/"
+	class={`go-back go-back--${size}`}
+>
+	Go back
+</a>
+
+<style>
+	.go-back {
+		border-radius: 4px;
+		background-color: #0d6efd;
+		text-decoration: none;
+		color: var(--just-white);
+		font-size: var(--small-font-size);
+		font-weight: bold;
+		transition: background 0.3s ease-out;
+	}
+
+	.go-back--sm {
+		padding: 0.45rem;
+		font-size: var(--small-font-size);
+	}
+
+	.go-back--md {
+		padding: 0.45rem 0.75rem;
+		font-size: var(--medium-font-size);
+	}
+
+	@media screen and (min-width: 680px) {
+		.go-back:hover {
+			background-color: #0b5ed7;
+		}
+	}
+</style>

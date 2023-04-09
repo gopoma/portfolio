@@ -4,6 +4,7 @@ import IconWrapper from "../../components/IconWrapper.astro";
 import Layout from "../../layouts/Layout.astro";
 import MainHead from "../../components/MainHead.astro";
 import SkillPill from "../../components/SkillPill.astro";
+import GoBackLink from "../../components/GoBackLink.astro";
 
 export async function getStaticPaths() {
 	const projects = await getCollection("projects");
@@ -29,12 +30,7 @@ const project = Astro.props;
 	<main class="project">
 		<h2 class="project__title-container">
 			<span class="project__title">{project.data.title}</span>
-			<a
-				href="/"
-				class="go-back"
-			>
-				Go back
-			</a>
+			<GoBackLink size="sm" />
 		</h2>
 		<section class="project__container">
 			<section class="project__img-container">
@@ -116,18 +112,6 @@ const project = Astro.props;
 		word-break: keep-all;
 	}
 
-	.go-back {
-		min-width: 75px;
-		border-radius: 4px;
-		padding: 0.45rem;
-		background-color: #0d6efd;
-		text-decoration: none;
-		color: var(--just-white);
-		font-size: var(--small-font-size);
-		font-weight: bold;
-		transition: background 0.3s ease-out;
-	}
-
 	.project__container {
 		display: grid;
 		gap: var(--regular-spacing);
@@ -184,10 +168,6 @@ const project = Astro.props;
 		.project__title-container {
 			flex-direction: row;
 			align-items: center;
-		}
-
-		.go-back:hover {
-			background-color: #0b5ed7;
 		}
 
 		.project__container {

@@ -1,6 +1,8 @@
 ---
 import FullScreenLayout from "../layouts/FullScreenLayout.astro";
 import MainHead from "../components/MainHead.astro";
+import { Picture } from "@astrojs/image/components";
+import GoBackLink from "../components/GoBackLink.astro";
 ---
 
 <FullScreenLayout
@@ -12,8 +14,34 @@ import MainHead from "../components/MainHead.astro";
 		description={"xd"}
 		slot="head"
 	/>
+	<main>
+		<Picture
+			src="/shared/404.webp"
+			widths={[200, 400, 800]}
+			aspectRatio="4:3"
+			sizes="(max-width: 340px) 80vw, 340px"
+			alt="Not Found"
+		/>
+		<h1>Not Found</h1>
+		<p>The resource that you've been looking for is broken or not available at this moment.</p>
+		<GoBackLink size="md" />
+	</main>
 </FullScreenLayout>
 
 <style>
+	main {
+		padding: var(--regular-spacing);
+		display: flex;
+		flex-direction: column;
+		gap: var(--regular-spacing);
+		align-items: center;
+	}
 
+	main > h1 {
+		font-size: var(--large-font-size);
+	}
+
+	main > p {
+		font-size: var(--medium-font-size);
+	}
 </style>
